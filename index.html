@@ -1,171 +1,211 @@
-export default function LandingPage() {
+export default function CollageneMarinLandingPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-black via-gray-900 to-gray-800 text-white">
+    <div className="bg-white text-gray-900 min-h-screen font-sans">
+      {/* HERO SECTION */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-cyan-950 via-teal-900 to-cyan-800 text-white">
         <div className="absolute inset-0 opacity-20">
-          <img
-            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
-            alt="Background"
-            className="w-full h-full object-cover"
-          />
+          <div className="w-full h-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.25),transparent_60%)]"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:flex items-center justify-between gap-12">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-              Build Your Dream Website 🚀
+        <div className="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
+          {/* LEFT */}
+          <div>
+            <span className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm">
+              ✨ Premium Marine Collagen
+            </span>
+
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mt-6 mb-6">
+              NOVARIS <br />
+              COLLAGÈNE MARIN
             </h1>
-            <p className="text-lg text-gray-300 mb-8">
-              صفحة هبوط احترافية وسريعة، مناسبة لأي مشروع، شركة، أو خدمة ديالك.
-              تصميم عصري، متجاوب مع الهاتف، وسهل التعديل.
+
+            <p className="text-lg text-cyan-100 mb-8 leading-relaxed max-w-xl">
+              استرجعي نضارة البشرة، قوى الشعر والأظافر، وخلي جسمك يستافد من
+              كولاجين بحري عالي الجودة.
             </p>
 
-            <div className="flex flex-wrap gap-4">
-              <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
-                Get Started
+            <div className="flex flex-wrap gap-4 mb-10">
+              <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition duration-300 shadow-xl">
+                اطلب الآن
               </button>
-              <button className="border border-white px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition">
-                Learn More
+
+              <button className="border border-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition duration-300">
+                معرفة المزيد
               </button>
             </div>
-          </div>
 
-          <div className="mt-12 lg:mt-0">
-            <img
-              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2070&auto=format&fit=crop"
-              alt="Hero"
-              className="rounded-3xl shadow-2xl w-full max-w-lg"
-            />
-          </div>
-        </div>
-      </section>
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+                <h3 className="text-2xl font-bold">10K+</h3>
+                <p className="text-sm text-cyan-100">زبون سعيد</p>
+              </div>
 
-      {/* Features */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            كلشي لي محتاج باش تطلق المشروع ديالك بطريقة احترافية.
-          </p>
-        </div>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+                <h3 className="text-2xl font-bold">100%</h3>
+                <p className="text-sm text-cyan-100">Natural</p>
+              </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: 'Fast Performance',
-              desc: 'سرعة عالية وتجربة مستخدم ممتازة.',
-              img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop',
-            },
-            {
-              title: 'Modern Design',
-              desc: 'تصميم عصري مناسب لجميع الأجهزة.',
-              img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
-            },
-            {
-              title: 'Easy Customization',
-              desc: 'سهل التعديل والتطوير على حسب الحاجة.',
-              img: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop',
-            },
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition"
-            >
-              <img
-                src={feature.img}
-                alt={feature.title}
-                className="h-56 w-full object-cover"
-              />
-
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.desc}</p>
+              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
+                <h3 className="text-2xl font-bold">+95%</h3>
+                <p className="text-sm text-cyan-100">رضا العملاء</p>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="relative flex justify-center">
+            <div className="absolute w-80 h-80 bg-cyan-400 blur-3xl opacity-30 rounded-full"></div>
+
+            <img
+              src="/mnt/data/WhatsApp Image 2026-05-08 at 22.49.09.jpeg"
+              alt="Collagene Marin"
+              className="relative z-10 rounded-[40px] shadow-2xl max-w-md w-full border border-white/10"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Showcase Section */}
-      <section className="bg-gray-100 py-24 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      {/* BENEFITS */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold mb-4">
+              لماذا تختار Collagène Marin ؟
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+              تركيبة متطورة غنية بالكولاجين البحري لدعم الجمال والصحة اليومية.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: '✨',
+                title: 'بشرة أكثر نضارة',
+                desc: 'يساعد على تحسين مرونة البشرة وتقليل علامات التقدم في السن.',
+              },
+              {
+                icon: '💪',
+                title: 'تقوية المفاصل',
+                desc: 'دعم طبيعي للمفاصل والعظام والنشاط اليومي.',
+              },
+              {
+                icon: '🌿',
+                title: 'مكونات طبيعية',
+                desc: 'تركيبة نقية بدون إضافات ضارة وجودة عالية.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300"
+              >
+                <div className="text-5xl mb-6">{item.icon}</div>
+                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SHOWCASE */}
+      <section className="py-24 px-6 bg-gradient-to-r from-cyan-50 to-teal-50">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
-              alt="Showcase"
-              className="rounded-3xl shadow-xl"
+              src="/mnt/data/WhatsApp Image 2026-05-08 at 22.49.09.jpeg"
+              alt="Product"
+              className="rounded-[40px] shadow-2xl"
             />
           </div>
 
           <div>
-            <h2 className="text-4xl font-bold mb-6">
-              Everything You Need In One Place
+            <h2 className="text-5xl font-bold mb-8 leading-tight">
+              جمال وصحة من أعماق البحر 🌊
             </h2>
-            <p className="text-gray-600 text-lg mb-6">
-              تقدر تبدل النصوص، الصور، الألوان، وتضيف أي حاجة بغيتي بسهولة.
+
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              الكولاجين البحري معروف بسرعة الامتصاص والفعالية الكبيرة فدعم
+              البشرة، الشعر، والأظافر.
             </p>
 
-            <ul className="space-y-4 text-gray-700">
-              <li>✅ Responsive Design</li>
-              <li>✅ SEO Friendly</li>
-              <li>✅ Clean Code</li>
-              <li>✅ Ready For Deployment</li>
-            </ul>
+            <div className="space-y-5">
+              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
+                <span className="text-2xl">✔️</span>
+                <p>يساعد على ترطيب البشرة</p>
+              </div>
+
+              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
+                <span className="text-2xl">✔️</span>
+                <p>تقوية الشعر والأظافر</p>
+              </div>
+
+              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
+                <span className="text-2xl">✔️</span>
+                <p>دعم العظام والمفاصل</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold">What Clients Say</h2>
-        </div>
+      {/* TESTIMONIALS */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold">آراء العملاء</h2>
+          </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              name: 'Yassine',
-              text: 'خدمة ممتازة وتصميم احترافي بزاف.',
-            },
-            {
-              name: 'Sara',
-              text: 'الصفحة خدامة بسرعة وكتبان زوينة فالتلفون.',
-            },
-            {
-              name: 'Hamza',
-              text: 'أفضل Landing Page خديتها لمشروعي.',
-            },
-          ].map((review, index) => (
-            <div
-              key={index}
-              className="bg-white border rounded-3xl p-8 shadow-md"
-            >
-              <p className="text-gray-600 mb-6">“{review.text}”</p>
-              <h4 className="font-bold text-lg">{review.name}</h4>
-            </div>
-          ))}
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                name: 'Sara',
+                review: 'النتيجة بانت ليا فالبشرة بعد أسابيع قليلة فقط 😍',
+              },
+              {
+                name: 'Imane',
+                review: 'شعري و الأظافر ولى أقوى بزاف من قبل.',
+              },
+              {
+                name: 'Nadia',
+                review: 'منتوج ممتاز والتغليف احترافي بزاف.',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 rounded-3xl p-8 shadow-lg"
+              >
+                <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  “{item.review}”
+                </p>
+                <h4 className="font-bold text-xl">{item.name}</h4>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="bg-black text-white py-24 px-6 text-center">
-        <h2 className="text-5xl font-bold mb-6">
-          Ready To Launch Your Project?
-        </h2>
+      <section className="py-24 px-6 bg-gradient-to-r from-cyan-950 to-teal-900 text-white text-center">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-5xl font-extrabold mb-8 leading-tight">
+            ابدئي رحلتك نحو بشرة صحية اليوم ✨
+          </h2>
 
-        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-          بدا المشروع ديالك اليوم وخلي الانطباع الأول يكون احترافي.
-        </p>
+          <p className="text-cyan-100 text-lg mb-10">
+            اطلب منتجك الآن واستفد من الجودة العالية للكولاجين البحري.
+          </p>
 
-        <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition">
-          Start Now
-        </button>
+          <button className="bg-white text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl">
+            اطلب الآن
+          </button>
+        </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-950 text-gray-400 py-10 text-center">
-        <p>© 2026 Your Brand. All rights reserved.</p>
+      {/* FOOTER */}
+      <footer className="bg-black text-gray-400 text-center py-8">
+        <p>© 2026 NOVARIS Nutrition — All Rights Reserved.</p>
       </footer>
     </div>
   );
