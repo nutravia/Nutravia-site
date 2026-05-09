@@ -1,165 +1,173 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Produit</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+export default function LandingPage() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-black via-gray-900 to-gray-800 text-white">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop"
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f5f5f5;
-    }
+        <div className="relative max-w-7xl mx-auto px-6 py-24 lg:flex items-center justify-between gap-12">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+              Build Your Dream Website 🚀
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              صفحة هبوط احترافية وسريعة، مناسبة لأي مشروع، شركة، أو خدمة ديالك.
+              تصميم عصري، متجاوب مع الهاتف، وسهل التعديل.
+            </p>
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition">
+                Get Started
+              </button>
+              <button className="border border-white px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition">
+                Learn More
+              </button>
+            </div>
+          </div>
 
-    .product {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      background: white;
-      padding: 20px;
-      border-radius: 15px;
-      animation: fadeIn 1s ease;
-    }
+          <div className="mt-12 lg:mt-0">
+            <img
+              src="https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=2070&auto=format&fit=crop"
+              alt="Hero"
+              className="rounded-3xl shadow-2xl w-full max-w-lg"
+            />
+          </div>
+        </div>
+      </section>
 
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
+      {/* Features */}
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">Why Choose Us?</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            كلشي لي محتاج باش تطلق المشروع ديالك بطريقة احترافية.
+          </p>
+        </div>
 
-    .images {
-      flex: 1;
-    }
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              title: 'Fast Performance',
+              desc: 'سرعة عالية وتجربة مستخدم ممتازة.',
+              img: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop',
+            },
+            {
+              title: 'Modern Design',
+              desc: 'تصميم عصري مناسب لجميع الأجهزة.',
+              img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+            },
+            {
+              title: 'Easy Customization',
+              desc: 'سهل التعديل والتطوير على حسب الحاجة.',
+              img: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?q=80&w=2070&auto=format&fit=crop',
+            },
+          ].map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition"
+            >
+              <img
+                src={feature.img}
+                alt={feature.title}
+                className="h-56 w-full object-cover"
+              />
 
-    .main-img {
-      width: 100%;
-      border-radius: 10px;
-    }
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    .thumbs {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
+      {/* Showcase Section */}
+      <section className="bg-gray-100 py-24 px-6">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+              alt="Showcase"
+              className="rounded-3xl shadow-xl"
+            />
+          </div>
 
-    .thumbs img {
-      width: 70px;
-      cursor: pointer;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
+          <div>
+            <h2 className="text-4xl font-bold mb-6">
+              Everything You Need In One Place
+            </h2>
+            <p className="text-gray-600 text-lg mb-6">
+              تقدر تبدل النصوص، الصور، الألوان، وتضيف أي حاجة بغيتي بسهولة.
+            </p>
 
-    .thumbs img:hover {
-      transform: scale(1.1);
-    }
+            <ul className="space-y-4 text-gray-700">
+              <li>✅ Responsive Design</li>
+              <li>✅ SEO Friendly</li>
+              <li>✅ Clean Code</li>
+              <li>✅ Ready For Deployment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    .details {
-      flex: 1;
-    }
+      {/* Testimonials */}
+      <section className="py-24 px-6 max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold">What Clients Say</h2>
+        </div>
 
-    .title {
-      font-size: 24px;
-      font-weight: bold;
-    }
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            {
+              name: 'Yassine',
+              text: 'خدمة ممتازة وتصميم احترافي بزاف.',
+            },
+            {
+              name: 'Sara',
+              text: 'الصفحة خدامة بسرعة وكتبان زوينة فالتلفون.',
+            },
+            {
+              name: 'Hamza',
+              text: 'أفضل Landing Page خديتها لمشروعي.',
+            },
+          ].map((review, index) => (
+            <div
+              key={index}
+              className="bg-white border rounded-3xl p-8 shadow-md"
+            >
+              <p className="text-gray-600 mb-6">“{review.text}”</p>
+              <h4 className="font-bold text-lg">{review.name}</h4>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    .price {
-      font-size: 20px;
-      color: green;
-      margin: 10px 0;
-    }
+      {/* CTA */}
+      <section className="bg-black text-white py-24 px-6 text-center">
+        <h2 className="text-5xl font-bold mb-6">
+          Ready To Launch Your Project?
+        </h2>
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      background: black;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+        <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+          بدا المشروع ديالك اليوم وخلي الانطباع الأول يكون احترافي.
+        </p>
 
-    .whatsapp {
-      background: #25D366;
-    }
+        <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition">
+          Start Now
+        </button>
+      </section>
 
-    .reviews {
-      margin-top: 40px;
-    }
-
-    .review {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-      .product {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-
-  <!-- المنتج -->
-  <div class="product">
-
-    <!-- الصور -->
-    <div class="images">
-      <img id="mainImage" src="images/product1.jpg" class="main-img">
-
-      <div class="thumbs">
-        <img src="images/product1.jpg" onclick="changeImage(this.src)">
-        <img src="images/product2.jpg" onclick="changeImage(this.src)">
-        <img src="images/product3.jpg" onclick="changeImage(this.src)">
-      </div>
+      {/* Footer */}
+      <footer className="bg-gray-950 text-gray-400 py-10 text-center">
+        <p>© 2026 Your Brand. All rights reserved.</p>
+      </footer>
     </div>
-
-    <!-- المعلومات -->
-    <div class="details">
-      <div class="title">Nom du produit</div>
-      <div class="price">199 MAD</div>
-
-      <p>
-        Produit de haute qualité. Idéal pour usage quotidien avec résultats rapides.
-      </p>
-
-      <a href="#" class="btn">Acheter maintenant</a>
-
-      <!-- زر واتساب -->
-      <a href="https://wa.me/212XXXXXXXXX" class="btn whatsapp">
-        Commander sur WhatsApp
-      </a>
-    </div>
-
-  </div>
-
-  <!-- آراء الزبناء -->
-  <div class="reviews">
-    <h2>⭐ Avis des clients</h2>
-
-    <div class="review">👍 Produit incroyable ! Je recommande.</div>
-    <div class="review">🔥 Qualité top et livraison rapide.</div>
-    <div class="review">💯 Très satisfait, merci !</div>
-  </div>
-
-</div>
-
-<script>
-function changeImage(src) {
-  document.getElementById("mainImage").src = src;
+  );
 }
-</script>
 
-</body>
-</html>
