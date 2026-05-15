@@ -1,213 +1,459 @@
-export default function CollageneMarinLandingPage() {
-  return (
-    <div className="bg-white text-gray-900 min-h-screen font-sans">
-      {/* HERO SECTION */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-cyan-950 via-teal-900 to-cyan-800 text-white">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.25),transparent_60%)]"></div>
-        </div>
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
 
-        <div className="relative max-w-7xl mx-auto px-6 py-20 grid lg:grid-cols-2 gap-12 items-center">
-          {/* LEFT */}
-          <div>
-            <span className="bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm">
-              ✨ Premium Marine Collagen
-            </span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mt-6 mb-6">
-              NOVARIS <br />
-              COLLAGÈNE MARIN
-            </h1>
+  <title>Collagène Marin | كولاجين بحري</title>
 
-            <p className="text-lg text-cyan-100 mb-8 leading-relaxed max-w-xl">
-              استرجعي نضارة البشرة، قوى الشعر والأظافر، وخلي جسمك يستافد من
-              كولاجين بحري عالي الجودة.
-            </p>
+  <style>
 
-            <div className="flex flex-wrap gap-4 mb-10">
-              <button className="bg-white text-black px-8 py-4 rounded-2xl font-bold hover:scale-105 transition duration-300 shadow-xl">
-                اطلب الآن
-              </button>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
 
-              <button className="border border-white px-8 py-4 rounded-2xl hover:bg-white hover:text-black transition duration-300">
-                معرفة المزيد
-              </button>
-            </div>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
-                <h3 className="text-2xl font-bold">10K+</h3>
-                <p className="text-sm text-cyan-100">زبون سعيد</p>
-              </div>
+    body{
+      background:#f5f7fa;
+      color:#222;
+      line-height:1.8;
+      font-family:'Cairo', sans-serif;
+    }
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
-                <h3 className="text-2xl font-bold">100%</h3>
-                <p className="text-sm text-cyan-100">Natural</p>
-              </div>
+    header{
+      background:linear-gradient(to bottom,#0d3b66,#1e6091);
+      color:white;
+      padding:70px 20px;
+      text-align:center;
+    }
 
-              <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4">
-                <h3 className="text-2xl font-bold">+95%</h3>
-                <p className="text-sm text-cyan-100">رضا العملاء</p>
-              </div>
-            </div>
-          </div>
+    header h1{
+      font-size:48px;
+      line-height:1.3;
+    }
 
-          {/* RIGHT IMAGE */}
-          <div className="relative flex justify-center">
-            <div className="absolute w-80 h-80 bg-cyan-400 blur-3xl opacity-30 rounded-full"></div>
+    header p{
+      max-width:750px;
+      margin:auto;
+      font-size:20px;
+      opacity:0.95;
+    }
 
-            <img
-              src="/mnt/data/WhatsApp Image 2026-05-08 at 22.49.09.jpeg"
-              alt="Collagene Marin"
-              className="relative z-10 rounded-[40px] shadow-2xl max-w-md w-full border border-white/10"
-            />
-          </div>
-        </div>
-      </section>
+    .hero-image{
+      margin-top:40px;
+    }
 
-      {/* BENEFITS */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold mb-4">
-              لماذا تختار Collagène Marin ؟
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              تركيبة متطورة غنية بالكولاجين البحري لدعم الجمال والصحة اليومية.
-            </p>
-          </div>
+    .hero-image img{
+      width:300px;
+      max-width:90%;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.3);
+    }
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: '✨',
-                title: 'بشرة أكثر نضارة',
-                desc: 'يساعد على تحسين مرونة البشرة وتقليل علامات التقدم في السن.',
-              },
-              {
-                icon: '💪',
-                title: 'تقوية المفاصل',
-                desc: 'دعم طبيعي للمفاصل والعظام والنشاط اليومي.',
-              },
-              {
-                icon: '🌿',
-                title: 'مكونات طبيعية',
-                desc: 'تركيبة نقية بدون إضافات ضارة وجودة عالية.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-3xl p-10 shadow-lg hover:shadow-2xl transition duration-300"
-              >
-                <div className="text-5xl mb-6">{item.icon}</div>
-                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    .btn{
+      display:inline-block;
+      margin-top:35px;
+      padding:16px 40px;
+      background:#25D366;
+      color:white;
+      text-decoration:none;
+      border-radius:50px;
+      font-size:20px;
+      font-weight:bold;
+      transition:0.3s;
+    }
 
-      {/* SHOWCASE */}
-      <section className="py-24 px-6 bg-gradient-to-r from-cyan-50 to-teal-50">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <img
-              src="/mnt/data/WhatsApp Image 2026-05-08 at 22.49.09.jpeg"
-              alt="Product"
-              className="rounded-[40px] shadow-2xl"
-            />
-          </div>
+    .btn:hover{
+      transform:scale(1.05);
+    }
 
-          <div>
-            <h2 className="text-5xl font-bold mb-8 leading-tight">
-              جمال وصحة من أعماق البحر 🌊
-            </h2>
+    section{
+      padding:90px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
 
-            <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              الكولاجين البحري معروف بسرعة الامتصاص والفعالية الكبيرة فدعم
-              البشرة، الشعر، والأظافر.
-            </p>
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+      font-size:38px;
+      color:#0d3b66;
+      line-height:1.5;
+    }
 
-            <div className="space-y-5">
-              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
-                <span className="text-2xl">✔️</span>
-                <p>يساعد على ترطيب البشرة</p>
-              </div>
+    .features{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
 
-              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
-                <span className="text-2xl">✔️</span>
-                <p>تقوية الشعر والأظافر</p>
-              </div>
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
 
-              <div className="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-md">
-                <span className="text-2xl">✔️</span>
-                <p>دعم العظام والمفاصل</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    .card:hover{
+      transform:translateY(-8px);
+    }
 
-      {/* TESTIMONIALS */}
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold">آراء العملاء</h2>
-          </div>
+    .card h3{
+      margin-bottom:20px;
+      color:#1e6091;
+      font-size:24px;
+      text-align:center;
+    }
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: 'Sara',
-                review: 'النتيجة بانت ليا فالبشرة بعد أسابيع قليلة فقط 😍',
-              },
-              {
-                name: 'Imane',
-                review: 'شعري و الأظافر ولى أقوى بزاف من قبل.',
-              },
-              {
-                name: 'Nadia',
-                review: 'منتوج ممتاز والتغليف احترافي بزاف.',
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-3xl p-8 shadow-lg"
-              >
-                <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  “{item.review}”
-                </p>
-                <h4 className="font-bold text-xl">{item.name}</h4>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    .card p{
+      font-size:17px;
+      text-align:center;
+    }
 
-      {/* CTA */}
-      <section className="py-24 px-6 bg-gradient-to-r from-cyan-950 to-teal-900 text-white text-center">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-5xl font-extrabold mb-8 leading-tight">
-            ابدئي رحلتك نحو بشرة صحية اليوم ✨
-          </h2>
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
 
-          <p className="text-cyan-100 text-lg mb-10">
-            اطلب منتجك الآن واستفد من الجودة العالية للكولاجين البحري.
-          </p>
+    .gallery img{
+      width:100%;
+      height:320px;
+      object-fit:cover;
+      border-radius:25px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
 
-          <button className="bg-white text-black px-10 py-5 rounded-2xl font-bold text-lg hover:scale-105 transition duration-300 shadow-2xl">
-            اطلب الآن
-          </button>
-        </div>
-      </section>
+    .gallery img:hover{
+      transform:scale(1.03);
+    }
 
-      {/* FOOTER */}
-      <footer className="bg-black text-gray-400 text-center py-8">
-        <p>© 2026 NOVARIS Nutrition — All Rights Reserved.</p>
-      </footer>
+    .testimonial{
+      background:white;
+      padding:35px;
+      border-radius:25px;
+      margin-bottom:25px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .testimonial p{
+      font-size:18px;
+      margin-bottom:15px;
+    }
+
+    .cta{
+      background:#1e6091;
+      color:white;
+      text-align:center;
+      border-radius:30px;
+      padding:70px 20px;
+    }
+
+    .cta h2{
+      font-size:42px;
+      margin-bottom:20px;
+      line-height:1.5;
+    }
+
+    footer{
+      background:#0d3b66;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+      margin-top:50px;
+    }
+
+    hr{
+      border:none;
+      border-top:1px solid #ddd;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:36px;
+      }
+
+      .section-title{
+        font-size:30px;
+      }
+
+      .cta h2{
+        font-size:32px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <header>
+
+    <h1>
+      Collagène Marin <br>
+      كولاجين بحري
+    </h1>
+
+    <p style="margin-top:25px;">
+      Découvrez la puissance du collagène marin pour une peau éclatante,
+      des cheveux plus forts et des articulations en meilleure santé.
+    </p>
+
+    <p style="margin-top:20px;font-size:22px;" dir="rtl">
+      اكتشف قوة الكولاجين البحري لبشرة مشرقة،
+      شعر أقوى ومفاصل أكثر راحة.
+    </p>
+
+    <div class="hero-image">
+      <img src="images/product1.jpg" alt="Collagène Marin">
     </div>
-  );
-}
 
+    <a href="https://wa.me/212600000000" class="btn">
+      Commander | اطلب الآن
+    </a>
+
+  </header>
+
+  <section>
+
+    <h2 class="section-title">
+      Pourquoi choisir notre Collagène Marin ؟
+      <br>
+      لماذا تختار الكولاجين البحري ديالنا؟
+    </h2>
+
+    <div class="features">
+
+      <div class="card">
+
+        <h3>✨ Peau Éclatante</h3>
+
+        <p>
+          Aide à réduire les signes de l’âge et améliore l’élasticité de la peau.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          يساعد على تقليل علامات التقدم في السن
+          وتحسين مرونة البشرة.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>💪 Cheveux & Ongles</h3>
+
+        <p>
+          Renforce les cheveux et favorise des ongles plus résistants.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          يقوي الشعر ويساعد على نمو أظافر أكثر قوة.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>🦴 Articulations</h3>
+
+        <p>
+          Soutient les articulations et le confort au quotidien.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          يدعم صحة المفاصل والراحة اليومية.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2 class="section-title">
+      Galerie du Produit
+      <br>
+      صور المنتج
+    </h2>
+
+    <div class="gallery">
+
+      <img src="images/product1.jpg">
+      <img src="images/product2.jpg">
+      <img src="images/product3.jpg">
+      <img src="images/product4.jpg">
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2 class="section-title">
+      Résultats & Bienfaits
+      <br>
+      النتائج والفوائد
+    </h2>
+
+    <div class="features">
+
+      <div class="card">
+
+        <h3>✔ Haute Qualité</h3>
+
+        <p>
+          Formule premium soigneusement sélectionnée.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          تركيبة عالية الجودة مختارة بعناية.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>✔ Utilisation Facile</h3>
+
+        <p>
+          Capsules simples à utiliser chaque jour.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          كبسولات سهلة الاستعمال يومياً.
+        </p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>✔ Effets Naturels</h3>
+
+        <p>
+          Conçu pour accompagner votre routine beauté et bien-être.
+        </p>
+
+        <hr style="margin:20px 0;">
+
+        <p dir="rtl">
+          مصمم لدعم روتين الجمال والعناية اليومية.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2 class="section-title">
+      Avis Clients
+      <br>
+      آراء الزبناء
+    </h2>
+
+    <div class="testimonial">
+
+      <p>
+        “Après quelques semaines, ma peau est devenue plus lumineuse.”
+      </p>
+
+      <p dir="rtl">
+        "بعد أسابيع قليلة أصبحت بشرتي أكثر إشراقاً."
+      </p>
+
+      <strong>- Sarah</strong>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        “Très bon produit, mes cheveux paraissent plus forts.”
+      </p>
+
+      <p dir="rtl">
+        "منتج رائع، شعري أصبح أقوى."
+      </p>
+
+      <strong>- Lina</strong>
+
+    </div>
+
+    <div class="testimonial">
+
+      <p>
+        “Packaging élégant et produit de qualité.”
+      </p>
+
+      <p dir="rtl">
+        "تغليف أنيق ومنتج ممتاز."
+      </p>
+
+      <strong>- Amal</strong>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="cta">
+
+      <h2>
+        Prenez soin de votre beauté dès aujourd’hui
+        <br>
+        ابدأ العناية بجمالك من اليوم
+      </h2>
+
+      <p style="font-size:20px;margin-top:20px;">
+        Offrez à votre corps les bienfaits du collagène marin.
+      </p>
+
+      <p style="font-size:20px;margin-top:15px;" dir="rtl">
+        امنح جسمك فوائد الكولاجين البحري.
+      </p>
+
+      <a href="https://wa.me/212600000000" class="btn">
+        Commander sur WhatsApp | اطلب عبر واتساب
+      </a>
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <p>
+      © 2026 Collagène Marin - Tous droits réservés
+      <br><br>
+      جميع الحقوق محفوظة
+    </p>
+
+  </footer>
+
+</body>
+</html>
